@@ -17,7 +17,7 @@ build:
   skip: true  # [py<38]
   script: {{ PYTHON }} -m pip install . -vv  # [unix]
   script: {{ PYTHON }} -m pip install {{ name }}-{{ version }}-cp{{ CONDA_PY }}-cp{{ CONDA_PY }}-win_amd64.whl -vv  # [win]
-  number: 1
+  number: 2
 
 requirements:
   build:
