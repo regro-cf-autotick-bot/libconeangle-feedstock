@@ -14,10 +14,10 @@ source:
   sha256: a32e28b3e321bdb802f28a5f04d1df65071ab42eef06a6dc15ed656780c0361e  # [win and py==310]
 
 build:
-  skip: true  # [py<38]
+  skip: true  # [py<38 or python_impl == 'pypy']
   script: {{ PYTHON }} -m pip install . -vv  # [unix]
   script: {{ PYTHON }} -m pip install {{ name }}-{{ version }}-cp{{ CONDA_PY }}-cp{{ CONDA_PY }}-win_amd64.whl -vv  # [win]
-  number: 1
+  number: 2
 
 requirements:
   build:
